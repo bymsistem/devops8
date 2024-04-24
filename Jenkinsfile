@@ -4,9 +4,9 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker build -t my-test .
+                    docker.build('my-test')
                 }
             }
-    }
+        }
     }
 }
