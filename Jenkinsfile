@@ -4,7 +4,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker.build('my-testjenkins:v1')
+                    docker build -t my-test:v1 .
                 }
             }
         }
