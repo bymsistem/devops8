@@ -7,6 +7,6 @@ pipeline {
                     docker build -t my-test .
                 }
             }
-        }
+    }
     }
 }
