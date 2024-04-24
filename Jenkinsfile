@@ -1,11 +1,12 @@
 pipeline {
-  agent any
-}
-
-stages {
-  stage(docker build) {
-      steps{
-        docker build -t my-testjenkins:v1 . 
-      }
-  }
+    agent any
+    stages {
+        stage('Docker Build') {
+            steps {
+                script {
+                    docker.build('my-testjenkins:v1')
+                }
+            }
+        }
+    }
 }
